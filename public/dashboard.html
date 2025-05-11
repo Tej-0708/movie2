@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Watchlist App</title>
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" href="favicon.ico" type="image/x-icon"> </head>
+<body>
+    <header class="app-header glassmorphism">
+        <div class="logo-title">
+            <h1>My Watchlist</h1>
+        </div>
+
+        <div class="search-container">
+             <input type="search" id="search-input" placeholder="Search movies or TV shows..." aria-label="Search content">
+             <button id="search-button" aria-label="Search">Search</button>
+        </div>
+
+        <div class="user-controls">
+            <span class="welcome-message">Welcome, <strong id="username-display">User</strong>!</span>
+            <button id="logout-button">Logout</button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <section id="search-results-section" class="content-section hidden">
+             <h2>Search Results <button class="close-section-btn" aria-label="Close search results">×</button></h2>
+             <div id="search-results-loader" class="loader hidden">Loading...</div>
+             <div id="search-results" class="movie-grid">
+                 </div>
+             <p id="search-error" class="error"></p>
+        </section>
+
+        <section id="watchlist-section" class="content-section">
+            <h2>My Watchlist</h2>
+            <div id="watchlist-loader" class="loader hidden">Loading...</div>
+            <div id="watchlist-items" class="movie-grid">
+                </div>
+             <p id="watchlist-error" class="error"></p>
+        </section>
+
+         <section id="recommendations-section" class="content-section">
+            <h2>Recommended For You</h2>
+             <div id="recommendations-loader" class="loader hidden">Loading...</div>
+            <div id="recommendations" class="movie-grid">
+                </div>
+             <p id="recommendations-error" class="error"></p>
+        </section>
+
+        <section id="trending-section" class="content-section">
+            <h2>Trending This Week</h2>
+            <div id="trending-loader" class="loader hidden">Loading...</div>
+             <div id="trending-items" class="movie-grid">
+                 </div>
+             <p id="trending-error" class="error"></p>
+        </section>
+
+        </main>
+
+     <div id="media-details-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content glassmorphism">
+            <button class="close-button modal-close-btn" aria-label="Close details modal">×</button>
+            <div id="modal-loader" class="loader hidden">Loading details...</div>
+            <div id="modal-body">
+                </div>
+            <p id="modal-error" class="error"></p>
+        </div>
+    </div>
+
+    <div id="notification-area" class="notification"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
